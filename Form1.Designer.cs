@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.labelOutput = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // inputName
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 0;
+            this.inputName.Location = new System.Drawing.Point(300, 98);
+            this.inputName.Name = "inputName";
+            this.inputName.Size = new System.Drawing.Size(187, 22);
+            this.inputName.TabIndex = 0;
             // 
             // label1
             // 
@@ -50,33 +51,44 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nama :";
             // 
-            // button1
+            // buttonSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(511, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Location = new System.Drawing.Point(511, 98);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
+            this.buttonSubmit.TabIndex = 2;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
+            // labelOutput
+            // 
+            this.labelOutput.AutoSize = true;
+            this.labelOutput.Location = new System.Drawing.Point(289, 153);
+            this.labelOutput.Name = "labelOutput";
+            this.labelOutput.Size = new System.Drawing.Size(16, 16);
+            this.labelOutput.TabIndex = 3;
+            this.labelOutput.Text = "...";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(244, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Hallo ......";
+            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Hallo";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -86,9 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.Label label2;
     }
 }

@@ -16,5 +16,10 @@ namespace modul2_pendahuluan
         {
             InitializeComponent();
         }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            labelOutput.Text = inputName.Text;
+        }
     }
 }
